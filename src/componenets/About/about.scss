@@ -1,0 +1,69 @@
+@import "../../global.scss";
+.about{
+    background-color:white;
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left{
+        flex:0.7;
+        overflow: hidden;
+        @include ipad{
+            display: flex;
+            align-items: center;
+        }
+
+        .imgcontainer{
+            border-radius: 50%;
+            width: 500px;
+            height:500px;
+            background-color: black;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+
+
+            @include mobile {
+                    background-repeat: 50%;
+                     width: 300px;
+                    height: 240px;
+                    margin: auto;
+                    background-color:black;
+                }
+
+            @include ipad{
+                height:400px;
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+            }
+            
+        }
+    }
+    .right{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .titlecontainer{
+            font-size: 30px;
+            font-weight: 600;
+        }
+                .paragraphCoantainer {
+                    width: 400px;
+                    line-height: 30px;
+
+                    @include mobile{
+                        width: 350px;
+                    }
+                }
+    }
+}

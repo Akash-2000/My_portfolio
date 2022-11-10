@@ -1,0 +1,97 @@
+@import "../../global.scss";
+.skills{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include mobile{
+            background-color: white;
+            /* display: flex; */
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+    }
+    .title{
+        display: flex;
+        font-size: 30px;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        @include mobile{
+            display: flex;
+            justify-content:flex-start;
+            font-size: 20px;
+        }
+    }
+    .skillset{
+        display: flex;
+        justify-content: space-around;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+        }
+        .leftcontainer{
+            margin-bottom: 10px;
+            text-align: center;
+
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
+            h1{
+                text-align: center;
+            }
+            .leftimg{
+                img{
+                border:2px solid whitesmoke;
+                border-radius: 20px;
+                margin: 10px;
+                width: 196px;
+                height: 181px;
+                }
+            }
+            .RIGHT{
+                img{
+                    border: 2px solid whitesmoke;
+                    margin: 10px;
+                    border-radius: 20px;
+                    width: 196px;
+                    height: 181px;
+                }
+                
+            }
+        }
+        .middlecontainer{
+            margin-bottom: 10px;
+                text-align: center;
+            .middle{
+                margin-top: 20px;
+                img {
+                        border: 2px solid whitesmoke;
+                        margin: 10px;
+                        border-radius: 20px;
+                        width: 196px;
+                        height: 181px;
+                    }
+            }
+        }
+        .rightcontainer{
+            margin-bottom: 10px;
+                text-align: center;
+            .backend{
+                display: flex;
+                flex-direction: column;
+                @include mobile{
+                    align-items: center;
+                }
+            img {
+                    border: 2px solid whitesmoke;
+                    margin: 10px;
+                    border-radius: 20px;
+                    width: 196px;
+                    height: 181px;
+                }
+            }
+        }
+    }
+    }

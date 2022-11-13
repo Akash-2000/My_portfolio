@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "./works.scss"
+import "./works.scss";
+import {BsGithub} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
 
@@ -13,7 +14,8 @@ export default function Works() {
       desc:
         "It is an educational website which contains programming languages tutorials handpicked from youtube.",
       img:
-        "assets/myphoto_png/Screenshot (24).png",
+        "assets/myphoto_png/Screenshot (24).png" ,
+      github:"https://github.com/Akash-2000/EdUcational-website",
       link:"https://revildocode.netlify.app/",
       
     },
@@ -25,6 +27,7 @@ export default function Works() {
         "Simple portfolio with parallax effect it is very useful for the beginers",
       img:
         "assets/myphoto_png/Screenshot (40).png",
+      github:"https://github.com/Akash-2000/Project_deploy",
       link:"https://cosmic-biscochitos-ab7906.netlify.app/",
     },
     {
@@ -35,9 +38,25 @@ export default function Works() {
         "In this website staffs can register themseleves with their prefferd subjects students can enroll based on their intrest using a simple CRUD",
       img:
         "assets/myphoto_png/Screenshot (41).png",
+      github:"https://github.com/Akash-2000/Student-Course-registration",
          link:"https://heartfelt-zabaione-975ef2.netlify.app/", 
     },
+     {
+      id: "4",
+      icon: "assets/myphoto_png/writing.png",
+      title: "Mini Job Portal",
+      desc:
+        "Using this website freelancers can post their skills and owners can see and select the freelancers they want based on the ",
+      img:
+        "assets/myphoto_png/Screenshot (43).png",
+        github: "https://github.com/Akash-2000/Project_deploy",
+         link:" https://domanicer.netlify.app/", 
+    },
+   
   ]
+  const handleco = ()=>{
+    console.log("button clicked")
+  }
   const handleClick = (way)=>{
       way === 'left' ? setcurrentSlider(currentSlider >0? currentSlider-1: 2) :
       setcurrentSlider(currentSlider < data.length -1 ?currentSlider+1:0)
@@ -49,12 +68,15 @@ export default function Works() {
       <div className="item">
         <div className="left">
             <div className="leftContainer">
+              <div className="top">
               <div className="imgContainer">
-                <img src={d.icon} alt="" />
+                <BsGithub className='icons'/>
+              </div>
+                <a className='viewcode'href={d.github}>VIEW CODE</a>
               </div>
                 <h2>{d.title}</h2>
                 <p>{d.desc}</p>
-              <a href={d.link} target="_blank" rel='noopener'>View Project</a>
+              <button onClick={()=>(window.location.href=d.link)}>Learn More</button>
             </div>
           </div>
         <div className="right">

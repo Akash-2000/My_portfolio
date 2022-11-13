@@ -10,7 +10,7 @@ import Skills from "./componenets/skills/skills";
 import "./app.scss"
 import { useState } from "react";
 function App() {
-  const [menuOpen,setmenuopen]=useState(true)
+  const [menuOpen,setmenuopen]=useState(false)
 
   return (
     <div className="app">
@@ -19,7 +19,6 @@ function App() {
      <div className="sections">
       <Intro/>
       <About/>
-      <Portfolio/>
       <Works/>
       <Skills/>
       <Contact/>

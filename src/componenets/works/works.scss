@@ -2,7 +2,8 @@
 
 
 .works{
-    background-color:crimson;
+    background-image: linear-gradient(to bottom right,pink,skyblue);
+    background-repeat:no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,12 +13,17 @@
         height: 50px;
         position: absolute;
         cursor: pointer;
-
+        @include mobile{
+            height: 30px;
+        }
         &.left{
             left: 100px;
             transform: rotate(180deg);
             @include ipad{
                 left:25px
+            }
+            @include mobile{
+                left:2px
             }
         }
         &.right{
@@ -26,27 +32,24 @@
             @include ipad{
                 right:25px
             }
+            @include mobile{
+                right:2px;
+            }
 
 
         }
         @include mobile{
-            display: none;
+            
         }
     }
 
     .slider{
-        height: 350px;
+        height: 80%;
         display: flex;
         position: absolute;
         left:0;
         transition: all 1s ease-out;
 
-        @include mobile{
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-
-        }
 
         .container{
             width: 100vw;
@@ -56,60 +59,66 @@
 
 
             .item{
-                width: 700px;
+                width:50%;
                 height: 100%;
                 background-color: #fff;
                 border-radius: 15px;
                 display: flex;
+                flex-direction: column-reverse;
                 align-items: center;
                 justify-content: center;
                 @include mobile{
-                    width: 90%;
-                    height: 150px;
-                    margin: 20px 0;
+                    width: 80%;
+                    height: 100%;
                 }
                 .left{
                     flex:4;
-                    height: 80%;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content:flex-end;
+                    justify-content: center;
 
 
                     .leftContainer{
                         width: 90%;
-                        height: 70%;
+                        height: 80%;
                         display: flex;
                         flex-direction: column;
+                        align-items:flex-start;
                         justify-content: space-between;
-                        @include mobile{
-                            width: 100%;
-                            height: 100%;
-
-                        }
-
-                        .imgContainer{
-                            width: 40px;
-                            height: 40px;
-                            border-radius:50%;
-                            background-color:coral;
+                        .top{
                             display: flex;
                             align-items: center;
-                            justify-content: center;
-
-                            @include mobile{
-                                width: 20px;
-                                height: 20px;
-                            }
-
-                            img{
-                                width: 25px;
-
-                                @include mobile{
-                                    width: 15px;
+                            .imgContainer {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                            
+                                    @include mobile {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                            
+                                    .icons {
+                                        font-size: 30px;
+                            
+                                        @include mobile {
+                                            width: 15px;
+                                        }
+                                    }
                                 }
-                            }
+                                .viewcode{
+                                    font-size: 15px;
+                                    text-decoration: none;
+                                }
+
                         }
+
+                       
                         h2{
                             font-size: 20px;
 
@@ -121,10 +130,42 @@
                         }
                         p{
                             font-size: 13px;
-                            @include mobile{
-                                display: none;
-                            }
                         }
+                     button{
+                            padding:15px;
+                            width: 30%;
+                            background-color:rgb(22, 97, 190);
+                            border: 2px solid white;
+                            color: white;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            position: relative;
+                            overflow: hidden;
+                            @include mobile{
+                                width: 50%;
+                            }
+                            &::after{
+                                content: "Go Live!";
+                                    position: absolute;
+                                    top: 0;
+                                    height: 100%;
+                                    width: 100%;
+                                    left: -100%;
+                                    color:white;
+                                    display: flex;
+                                    /* flex-direction: column; */
+                                    align-items: center;
+                                    justify-content: center;
+                                    transition: 2s all ease;
+                                    background-color:rgb(44, 234, 44);
+
+                                }
+                            &:hover{&::after{
+                                transform: translateX(100%);
+                            }}
+                           
+                        }
+                        
                         a{
                             font-size: 12px;
                             font-weight: 600;
@@ -138,16 +179,16 @@
 
 
                 .right{
-                    flex:8;
+                    flex:5;
                     height: 100%;
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     overflow: hidden;
                     img{
-                        width:450px;
-                        height:350px;
-                        transform: rotate(75deg);
+                        width:100%;
+                        height: 100%;
                         
                     }
                 }

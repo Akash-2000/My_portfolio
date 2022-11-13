@@ -21,7 +21,7 @@ export default function Contact() {
         email:email,
         Message:Messagetext
       }
-      axios.post("http://localhost:5000/mess/sendmail",data).then((res)=>{
+      axios.post("https://portfoliomailer01.herokuapp.com/mess/sendmail",data).then((res)=>{
         console.log("im here")
         console.log(res.statusText)
         if(res.statusText == 'OK'){
@@ -37,7 +37,7 @@ export default function Contact() {
         <img src="assets/myphoto_png/shake.svg" alt="" />
       </div>
       <div className="right">
-        <h2>Contact.</h2>
+        <h2>Contact</h2>
         <form onSubmit={handleSubmit}>
           <input type="text" onChange={handlemail} placeholder='Email' />
           <textarea placeholder='Message' onChange={handletext}></textarea>

@@ -90,13 +90,16 @@
 
             h3{
                 font-size: 30px;
+               
                 @include mobile{
                     font-size: 20px;
+                  
                 }
 
                 span{
                     font-size: inherit;
                     color:crimson;
+                    cursor: pointer;
 
                 }
                 .ityped-cursor{
@@ -112,6 +115,13 @@
                     }
                     
                 }
+               
+            }
+             .myresume {
+                margin-top: 20px;
+               span{
+                text-decoration: underline;
+               }
             }
            
         }

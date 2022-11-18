@@ -1,6 +1,7 @@
 import React from 'react'
 import "./topbar.scss"
 import {BsFillPersonFill} from 'react-icons/bs'
+import {FaGithub} from 'react-icons/fa'
 import {GrMail} from 'react-icons/gr'
 export default function topbar({menuOpen,setmenuopen}) {
   return (
@@ -15,6 +16,10 @@ export default function topbar({menuOpen,setmenuopen}) {
            <div className="itemContainer">
               <GrMail className='icon'/>
               <span> akashpoovan983@gmail.com</span>
+            </div>
+           <div className="itemContainer">
+              <FaGithub className='icon'/>
+              <span onClick={()=>(window.location.href="https://github.com/Akash-2000")}>Akash-2000</span>
             </div>
           </div>
           

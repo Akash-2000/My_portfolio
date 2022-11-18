@@ -1,0 +1,50 @@
+@import "../../global.scss";
+
+.Achievemnts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    .title{
+        font-size: 20px;
+        @include mobile{
+            display: none;
+        }
+    }
+    .certificate{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include mobile{
+            flex-direction: column;
+        }
+        .certificatecontainer {
+                width: 30%;
+                height: 70%;
+                border: 2px solid rgb(193, 191, 191);
+                border-radius: 10px;
+                @include mobile{
+                    width: 80%;
+                    margin-bottom: 15px;
+                }
+                .top {
+
+                    width: 100%;
+                    height: 70%;
+                    overflow: hidden;
+        
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .bottom{
+                    width: 100%;
+                    @include mobile{
+                        height: fit-content;
+                    }
+                }
+            }
+    }
+    
+}

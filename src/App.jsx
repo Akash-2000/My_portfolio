@@ -7,6 +7,7 @@ import Contact from "./componenets/contact/contatct";
 import Menu from "./componenets/menu/menu";
 import About from "./componenets/About/about";
 import Skills from "./componenets/skills/skills";
+import Achievemnts from "./componenets/Achievements/Achievemnts";
 import "./app.scss"
 import { useState } from "react";
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <About/>
       <Works/>
       <Skills/>
+      <Achievemnts/>
       <Contact/>
      </div>
    </div>

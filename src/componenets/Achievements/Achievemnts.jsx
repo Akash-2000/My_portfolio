@@ -36,7 +36,7 @@ export default function Achievemnts() {
                 <img src={e.image} alt="" />
             </div>
             <div className="bottom">
-                <h2>Title:{e.Title}</h2>
+                <h2>{e.Title}</h2>
                 <h3><a href={e.link}>View Certifiacte</a></h3>
             </div>
         </div>

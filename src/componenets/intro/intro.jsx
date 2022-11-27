@@ -21,7 +21,7 @@ export default function Intro() {
           <h2>HI There, I'm</h2>
           <h1>Akash Poovan</h1>
           <h3>A <span ref={textref}></span></h3>
-          <h3 className='myresume'>Check Out <span  onClick={()=>(window.location.href="https://drive.google.com/file/d/1fYknUxp1qfD-7zqXP_Hv_Rmf89yipq9N/view?usp=sharing")}>My Resume</span></h3>
+          <h3 className='myresume'>Check Out <span  onClick={()=>(window.location.href="https://drive.google.com/file/d/1F36qScc4nQrjb3KNKD91Yb9FVz82dBEZ/view?usp=share_link")}>My Resume</span></h3>
         </div>
         <a href="#portfolio">
           <AiOutlineDown className='down'/>

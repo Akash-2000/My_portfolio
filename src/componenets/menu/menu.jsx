@@ -1,5 +1,7 @@
 import React from 'react'
 import "./menu.scss"
+import {FaGithub} from 'react-icons/fa'
+
 
 export default function Menu({menuOpen,setmenuopen}) {
   return (
@@ -26,6 +28,10 @@ export default function Menu({menuOpen,setmenuopen}) {
             <li onClick={()=>{setmenuopen(false)}}>
 
                 <a href="#contact">Contact</a>
+            </li>
+            <li className='baby'>
+             <FaGithub className='icon'/>
+              <span onClick={()=>(window.location.href="https://github.com/Akash-2000")}>Akash-2000</span>
             </li>
         </ul>
     </div>

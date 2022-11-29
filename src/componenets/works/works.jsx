@@ -14,7 +14,7 @@ export default function Works() {
       desc:
         "It is an educational website which contains programming languages tutorials handpicked from youtube.",
       img:
-        "assets/myphoto_png/Screenshot (24).png" ,
+        "assets/myphoto_png/website1.jpeg" ,
       github:"https://github.com/Akash-2000/EdUcational-website",
       link:"https://revildocode.netlify.app/",
       

@@ -26,7 +26,7 @@ export default function Works() {
       desc:
         "Simple portfolio with parallax effect it is very useful for the beginers",
       img:
-        "assets/myphoto_png/Screenshot (40).png",
+        "assets/myphoto_png/website2.jpeg",
       github:"https://github.com/Akash-2000/Project_deploy",
       link:"https://cosmic-biscochitos-ab7906.netlify.app/",
     },
@@ -37,7 +37,7 @@ export default function Works() {
       desc:
         "In this website staffs can register themseleves with their prefferd subjects students can enroll based on their intrest using a simple CRUD",
       img:
-        "assets/myphoto_png/Screenshot (41).png",
+        "assets/myphoto_png/website3.jpeg",
       github:"https://github.com/Akash-2000/Student-Course-registration",
          link:"https://heartfelt-zabaione-975ef2.netlify.app/", 
     },
